@@ -72,7 +72,7 @@ def rocket_code():
     return token
 
 def rocket_url():
-    url_token = f"http://localhost:8000/activate/{secrets.token_hex(16)}"
+    url_token = f"https://rocket-emailer.onrender.com/{secrets.token_hex(16)}"
     return url_token
 
 def render_template(template_name: str, **kwargs) -> str:
