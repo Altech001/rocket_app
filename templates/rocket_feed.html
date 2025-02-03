@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket AI Emailer</title>
+    <style>
+        :root {
+            --primary-color: #0062ff;
+            --secondary-color: #00b7ff;
+            --accent-color: #ff3366;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+            background-color: #f7fafc;
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            background-color: #f5fbff;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: black;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .content {
+            padding: 30px 20px;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .content .info-box {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid  #ff3366;
+            border-radius: 8px;
+            margin-bottom: 18px;
+        }
+
+        .content a.button {
+            display: inline-block;
+            background: blue;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+            transition: 0.3s ease;
+        }
+
+        .content a.button:hover {
+            background: blue;
+            transform: translateY(-2px);
+        }
+
+        .token{
+            color: blue;
+        }
+        .url_token{
+            font-size: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .others{
+            font-size: 10px;
+        }
+
+        .footer {
+            background-color: black;
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #00b7ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .help{
+            font-size: 20px;
+            font-weight: 600;
+            color: red;
+            margin: 0;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+        .devs{
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+
+            .header, .content, .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rocket Activation Code</h1>
+        </div>
+
+        <div class="content">
+            <h2>Hello, {{ name | default("") }}👋</h2>
+            <p>Your Activation code is:</p>
+            <span class="token"><h2>{{ token }}</h2></span>
+            <div class="info-box">
+                <strong class="help">Thanks Too?</strong> 
+                <p class="devs">Flutter Dev : ABAASA ALBERT</p>
+                <p class="devs">WEB Dev : MASABA MARVIN</p>
+            </div>
+            <div class="url_token">
+            <strong><span>Your Activation url incase of any issues:</span></strong>
+            <a href="{{ url_token }}" target="_blank" class="url_token">{{ url_token }}</a>
+            </div>
+            <div class="others">Please do not hesitate to contact our support team if you have any questions or concerns.
+                Thank you 💜</div>
+            {% if action_url %}
+            <a href="{{ action_url }}" class="button">{{ action_text | default("Get Started →") }}</a>
+            {% endif %}
+        </div>
+
+        <div class="footer">
+            <p>&copy; {{ year | default("2025") }} Rocket AI. All rights reserved.</p>
+            <p><span class="help">Need help?</span> Email us at <a href="mailto:{{ contact_email | default("support@WeaverCo.com") }}">{{ contact_email | default("support@rocket.com") }}</a></p>
+        </div>
+    </div>
+</body>
+</html>
