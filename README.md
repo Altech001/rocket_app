@@ -29,7 +29,7 @@
 
 Below is an example diagram that illustrates the overall architecture of Rocket App. *(Replace `assets/architecture_diagram.png` with your actual diagram image if available.)*
 
-![Architecture Diagram](assets/architecture_diagram.png)
+
 
 ### Email Preview
 
