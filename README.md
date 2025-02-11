@@ -51,3 +51,4 @@ altech001-rocket_app/
 ├── assets/
 └── templates/
     └── rocket_feed.html
+```
