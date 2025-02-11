@@ -11,4 +11,4 @@ class ClientData(BaseModel):
     
 class User(BaseModel):
     username: str
-    password: str
+    email: str
