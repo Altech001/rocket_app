@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 from datetime import datetime
 
@@ -11,4 +12,5 @@ class ClientData(BaseModel):
     
 class User(BaseModel):
     username: str
-    email: str
+    email: Optional[str] = None
+    
