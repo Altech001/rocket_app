@@ -8,3 +8,7 @@ class ClientData(BaseModel):
     client_email: str
     client_message: str
     submitted_on: str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+class User(BaseModel):
+    username: str
+    password: str
